@@ -4,7 +4,9 @@ public class Livro {
     double valor;
     String isbn;
     Autor autor;
-
+    public Livro(){
+        System.out.println("novo livro criado!");
+    }
     public void showDetails(){
         String mensagem="Mostrando detalhes do livros";
         System.out.println(mensagem);
