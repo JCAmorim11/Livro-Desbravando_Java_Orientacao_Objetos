@@ -1,9 +1,10 @@
 public class Livro {
     private String nome;
     private String descricao;
-    private double valor;
+    protected double valor;
     private String isbn;
     private Autor autor;
+
     /*
     *
     * Exemplo de Overload
@@ -37,6 +38,7 @@ public class Livro {
         if(discount > 0.3){
             return false;
         }
+        System.out.println("livro com desconto!");
         this.valor -= this.valor * discount;
         return true;
     }

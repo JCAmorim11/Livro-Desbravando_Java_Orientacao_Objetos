@@ -1,12 +1,14 @@
-//public class ApplicationStart {
-   /* public static void main(String[] args){
+public class RegistroVendas {
+    public static void main(String[] args){
+
+
 
         Autor autor = new Autor();
         autor.setNome("Vladimir Lenny");
         autor.setEmail("vlad1917@pravda.com");
         autor.setCpf("24311919662");
 
-        LivroFisico fisico= new LivroFisico(autor);
+          LivroFisico fisico= new LivroFisico(autor);
         fisico.setNome("Java 8");
         fisico.setDescricao("Ensinando java 8");
         fisico.setValor(59.99);
@@ -26,25 +28,12 @@
         livro_Avinganca.setIsbn("978-5-0405-6657-0");
        // livro_Avinganca.showDetails();
 
+        CarrinhoCompras carrinho = new CarrinhoCompras();
 
-        if(!fisico.desconto(0.3)){
-            System.out.println("O desconto nao podes ser maior que 30%");
-        }else {
-            System.out.println("O valor do livro com desconto é: "+fisico.getValor());
-        }
-        System.out.println("\n -------------------------------------------- \n");
-        Ebook ebook = new Ebook(autor);
-        ebook.setValor(30.91);
-        ebook.setNome("Saiba o que fazer");
-        ebook.showDetails();
-
-        if(!ebook.desconto(0.3)){
-            System.out.println("O desconto nao podes ser maior que 15%");
-        }else {
-            System.out.println("O valor do livro com desconto é: "+ebook.getValor());
-        }
-
-
-
+        carrinho.add(fisico);
+        carrinho.add(livro_Avinganca);
+        System.out.println("Total: "+carrinho.getTotal());
     }
-}*/
+
+
+}
