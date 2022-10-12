@@ -1,3 +1,5 @@
+package livraria;
+
 import livraria.produtos.Produto;
 
 public class CarrinhoCompras {
