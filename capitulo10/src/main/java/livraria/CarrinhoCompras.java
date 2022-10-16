@@ -3,15 +3,21 @@ import livraria.produtos.*;
 
 public class CarrinhoCompras {
     private double total;
-    private Object[] produtos = new Produto[10];
+    private Produto[] produtos;
     private int contador = 0;
 
-    public void add(Object object) {
-        System.out.println("Adicionando: " + object);
-        this.produtos[contador] = object;
+    public CarrinhoCompras(Produto[] produtos) {
+        this.produtos = produtos;
+    }
+
+    public void add(Produto produto) {
+        System.out.println("Adicionando: " + produto);this.produtos[contador] = produto;
         contador++;
-        Produto molde = (Produto) object;
-        this.total += molde.getValue();
+        this.total += produto.getValue();
+    }
+
+    public void remove(int posicao){
+       this.produtos[posicao] = null;
     }
 
     public double getTotal() {

@@ -3,6 +3,7 @@ package livraria.teste;
 import livraria.*;
 import livraria.produtos.*;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class ApplicationStart {
@@ -47,104 +48,33 @@ public class ApplicationStart {
         ebook.setNome("Estetica e ontologia");
         ebook.setValue(35.5);
 
-        CarrinhoCompras carro = new CarrinhoCompras();
-        carro.add(fisico);
-        carro.add(livro_Avinganca);
-        carro.add(revista);
-        carro.add(ebook);
-        carro.add(ebook);
-        carro.add(ebook);
-        carro.add(ebook);
-        carro.add(ebook);
-        carro.add(ebook);
-        carro.add(ebook);
 
-        Object[] produtos = carro.getProdutos();
+        CarrinhoCompras carro = new CarrinhoCompras(new Produto[100]);
+    //    carro.add(ebook);
 
-        System.out.println("\n -------------------------------------------- \n");
-   /*    for(Object object: produtos){
-           try
-           {
-               Produto molde = (Produto) object;
-               System.out.println(molde.getValue());
-           }catch (Exception e){
-                System.out.println("O objeto não implementa produto");
-           }
+        ArrayList lista = new ArrayList();
+        String valor = "Conhecendo arrays-lists";
+        lista.add(valor);
+        System.out.println(lista.contains(valor));
+        lista.remove(valor);
+        System.out.println(lista.contains(valor));
 
-       }*/
 
-       // System.out.println(ebook.toString());
+        lista.add(10);
+        lista.add("nova string");
+        lista.add(new Revista());
+        int value =  (int) lista.get(0);
 
-        if(autor == autor2){
-            System.out.println("Igual");
-        }
-        else{
-            System.out.println("Diferente");
-        }
 
-        /*if(autor.equals(autor2)){
-            System.out.println("Igual");
-        }
-        else{
-            System.out.println("Diferente");
-        }*/
 
-        System.out.println("São iguais: "+autor.equals(autor2));
-        System.out.println(autor.getClass().getSimpleName());
 
-        Integer inte = new Integer(10);
-        int valor =  inte.intValue();
-        System.out.println("\n--------------------------------------\n");
 
-        boolean res = Boolean.parseBoolean("false");
-        byte parseByte = Byte.parseByte("1" );
-        short parseShort = Short.parseShort("10");
-        int parseInt = Integer.parseInt("100");
-        long parseLong = Long.parseLong("1000");
-        float parseFloat = Float.parseFloat("10.1");
-        double parseDouble = Double.parseDouble("100.2");
-        System.out.println(valor+"\nboolean:"+res+"\nbyte:"+parseByte+"\nshort:"+parseShort+"\nint:"+parseInt+
-                "\nlong:"+parseLong+"\nfloat"+parseFloat+"\ndouble:"+parseDouble);
 
-        System.out.println("\n--------------------------------------");
 
-        long round = Math.round(3.99);
-        long max = Math.max(100, 10);
-        int min = Math.min(100,10);
-        int abs = Math.abs(-30);
-        double sqrt = Math.sqrt(4);
-        System.out.println("\nround:"+round+"\nmax:"+max+"\nmin:"+min+"\nabs:"+abs+
-                "\nsqrt:"+sqrt);
 
-        System.out.println("\n--------------------------------------");
 
-        Random random = new Random();
-        System.out.println(random.nextInt(10));
-        System.out.println("\n--------------------------------------");
-
-        String java = "java";
-        String java2 = "java";
-        System.out.println(java.equals(java2));
-        System.out.println(java == java2);
-        java.replace("v", "c");
-        System.out.println(java);
-        String novaString = java.replace("v","c");
-        System.out.println(novaString);
-        System.out.println("\n--------------------------------------");
-
-        String replace = java.replace("v", "c");
-        String upperCase = java.toUpperCase();
-        String lowerCase = "JAVA".toLowerCase();
-        char charAt = java.charAt(0);
-        boolean endsWith = java.endsWith("a");
-        boolean startsWith = java.startsWith("s");
-        boolean equals = java.equalsIgnoreCase("JAVA");
-        System.out.println("\nreplace:"+replace+"\nupper case:"+upperCase+"\nlower case:"+lowerCase+"\nchar at:"+charAt+
-                "\nends with:"+endsWith+"\nstarts with:"+startsWith+"\nequals:"+equals);
 
 
     }
-
-
 
 }
