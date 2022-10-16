@@ -24,7 +24,17 @@ public class LivroFisico extends Livro implements Promocional {
     }
 
     @Override
+    public boolean desconto10() {
+        return Promocional.super.desconto10();
+    }
+
+    @Override
     public double getValue() {
         return this.value;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }

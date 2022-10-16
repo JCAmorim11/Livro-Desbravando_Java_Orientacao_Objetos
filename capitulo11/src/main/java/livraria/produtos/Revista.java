@@ -17,6 +17,11 @@ public class Revista implements Produto, Promocional {
         return true;
     }
 
+    @Override
+    public boolean desconto10() {
+        return Promocional.super.desconto10();
+    }
+
     public String getName() {
         return name;
     }
@@ -31,6 +36,11 @@ public class Revista implements Produto, Promocional {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public int compareTo(Produto outro) {
+        return 0;
     }
 
     public double getValue() {
@@ -50,4 +60,8 @@ public class Revista implements Produto, Promocional {
     }
 
 
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
 }

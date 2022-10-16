@@ -13,4 +13,8 @@ public class MiniLivro extends Livro {
         return this.value;
     }
 
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
 }

@@ -29,6 +29,11 @@ public class Ebook extends Livro implements Promocional {
         return true;
     }
 
+    @Override
+    public boolean desconto10() {
+        return Promocional.super.desconto10();
+    }
+
     public String toString(){
         return "sou um ebook S2";
     }
@@ -36,5 +41,10 @@ public class Ebook extends Livro implements Promocional {
     @Override
     public double getValue() {
        return this.value;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }

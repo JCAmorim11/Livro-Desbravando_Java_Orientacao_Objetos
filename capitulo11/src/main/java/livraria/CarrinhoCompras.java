@@ -1,22 +1,25 @@
 package livraria;
 
+import livraria.produtos.Produto;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class CarrinhoCompras {
     private double total;
-    private Produto[] produtos;
+    private ArrayList<Produto> produtos;
     private int contador = 0;
 
     public CarrinhoCompras(Produto[] produtos) {
-        this.produtos = produtos;
+        this.produtos = new ArrayList<>();
     }
 
     public void add(Produto produto) {
-        System.out.println("Adicionando: " + produto);this.produtos[contador] = produto;
-        contador++;
-        this.total += produto.getValue();
+        this.produtos.add(produto);
     }
 
     public void remove(int posicao){
-       this.produtos[posicao] = null;
+       this.produtos.remove(posicao);
     }
 
     public double getTotal() {
@@ -27,8 +30,8 @@ public class CarrinhoCompras {
         this.total = total;
     }
 
-    public Object[] getProdutos() {
-        return this.produtos;
+    public List<Produto> getProdutos() {
+        return produtos;
 
     }
 
