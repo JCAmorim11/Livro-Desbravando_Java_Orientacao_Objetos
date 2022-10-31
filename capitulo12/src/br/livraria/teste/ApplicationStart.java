@@ -118,15 +118,17 @@ public class ApplicationStart {
 
         List<Livro> filtrados = new ArrayList<>();
 
-        for(Livro livro: livros){
+   /*     for(Livro livro: livros){
             if(livro.getNome().contains("Java")){
                 filtrados.add(livro);
             }
-        }
+        }*/
+
         System.out.println("------------------------------------------------");
-        for(Livro livro: filtrados){
+        livros.stream().filter(l -> l.getNome().contains("Java")).forEach(l-> System.out.println(l.getNome()));
+       /* for(Livro livro: livros){
             System.out.println(livro.getNome());
-        }
+        }*/
 
 
     }
